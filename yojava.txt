@@ -1,298 +1,784 @@
-IF ELSE:prob 1
+CONTROL STRUCTURES:
 
+IF ELSE:prob 1
+ 
 import java.util.Scanner;
 class Main {
-    public static void main(String[] args) 
-    {
-       Scanner input = new Scanner(System.in);
-        int a=input.nextInt();
-        if(a>18)
-           System.out.print("elligible");
-	else
-	   System.out.print("not eligible");
+     public static void main(String[] args) 
+     {
+        Scanner input = new Scanner(System.in);
+         int a=input.nextInt();
+         if(a>18)
+            System.out.print("elligible");
+ 	else
+ 	   System.out.print("not eligible");
+     }
     }
-   }
-
+ 
 NESTED IF:prob 2
-
+ 
 a) import java.util.Scanner;
-   class Main {
-    public static void main(String[] args) 
-    {
-       Scanner input = new Scanner(System.in);
-        int a=input.nextInt();
-        int b=input.nextInt();
-      if(a>85)
-      {
-          System.out.print("elligible");
-       if(b<50000)
-      {
-         System.out.print("eligibile");
-      }
-      }
-      else
-      {
-          System.out.print("not eligible");
-      }
-      
-        
-    }
-}
+    class Main {
+     public static void main(String[] args) 
+     {
+        Scanner input = new Scanner(System.in);
+         int a=input.nextInt();
+         int b=input.nextInt();
+       if(a>85)
+       {
+           System.out.print("elligible");
+        if(b<50000)
+       {
+          System.out.print("eligibile");
+       }
+       }
+       else
+       {
+           System.out.print("not eligible");
+       }
+       
+         
+     }
+ }
 b) import java.util.Scanner;
-   class Main {
-    public static void main(String[] args) 
-    {
-       Scanner input = new Scanner(System.in);
-        int a=input.nextInt();
-        int b=input.nextInt();
-      if(a>85 && b<50000)
-  	System.out.print("elligible");
-      else
-	System.out.print("not eligible");
-    }
+    class Main {
+     public static void main(String[] args) 
+     {
+        Scanner input = new Scanner(System.in);
+         int a=input.nextInt();
+         int b=input.nextInt();
+       if(a>85 && b<50000)
+   	System.out.print("elligible");
+       else
+ 	System.out.print("not eligible");
+     }
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ARRAY:
 
 FOR LOOP WITH SINGLE-DIMENSIONAL ARRAY:
-
+ 
 class Main {
-    public static void main(String[] args) 
-    {
-        int arr[][]={1,4,5,8,9};
-        int count=0;
-        for(int i=0;i<arr.length;i++)
-        {
-            count++;
-	    System.out.println(count);
+     public static void main(String[] args) 
+     {
+         int arr[][]={1,4,5,8,9};
+         int count=0;
+         for(int i=0;i<arr.length;i++)
+         {
+             count++;
+ 	    System.out.println(count);
+          }
+      }
+   }
+ 
+FOR LOOP WITH MULTI-DIMENSIONAL ARRAY:
+ 
+class Main {
+     public static void main(String[] args) 
+     {
+         int arr[][]={{1,4,5,8,9},{11,12,13,14,15}};
+         for(int i=0;i<arr.length;i++)
+         {
+             for(int j=0;j<arr[i].length;j++) 
+             {
+                 System.out.print(arr[i][j]+" ");
+             }
+              System.out.println(" ");
          }
      }
-  }
-
-FOR LOOP WITH MULTI-DIMENSIONAL ARRAY:
-
-class Main {
-    public static void main(String[] args) 
-    {
-        int arr[][]={{1,4,5,8,9},{11,12,13,14,15}};
-        for(int i=0;i<arr.length;i++)
-        {
-            for(int j=0;j<arr[i].length;j++) 
-            {
-                System.out.print(arr[i][j]+" ");
-            }
-             System.out.println(" ");
-        }
-    }
-}
-
+ }
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+STRINGS:
 
 STRING-TO GET INPUT FROM USER AND COMPARE:
-
+ 
 import java.util.Scanner;
 class Main {
-    public static void main(String[] args) {
-       String s1 = new String("Hello");
-       Scanner input = new Scanner(System.in);
-       String s2 = input.nextLine();
-       System.out.println(s1.equals(s2));
-    }
-}
-
-
+     public static void main(String[] args) {
+        String s1 = new String("Hello");
+        Scanner input = new Scanner(System.in);
+        String s2 = input.nextLine();
+        System.out.println(s1.equals(s2));
+     }
+ }
+ 
+ 
 STRING-STRINGS COMPARISON USING LITERALS AND KEYWORD(MEMORY ALLOCATION):
-
+ 
 class Main {
-    public static void main(String[] args) {
-       String s1= "Java is fun";
-       String s2= "Java is fun";
-       String s3 = new String("Java is fun");
-       System.out.println(s1 == s2);
-       System.out.println(s1 == s3);
-       System.out.println(s2 == s3);
-       System.out.println(s1.equals(s3));
-    }
-}
-
-
+     public static void main(String[] args) {
+        String s1= "Java is fun";
+        String s2= "Java is fun";
+        String s3 = new String("Java is fun");
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s2 == s3);
+        System.out.println(s1.equals(s3));
+     }
+ }
+ 
+ 
 STRING-TO PRINT STRING NO.OF.TIMES:
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String s1="Java programming";
-        for(int i=0;i<s1.length();i++){
-        System.out.println(s1);
-        }
-        
-    }
-}
-
+     public static void main(String[] args) {
+         String s1="Java programming";
+         for(int i=0;i<s1.length();i++){
+         System.out.println(s1);
+         }
+         
+     }
+ }
+ 
 STRING-TO PRINT ONE BY ONE FROM TOP TO BOTTOM:
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String s1="Java programming";
-        for(int i=0;i<s1.length();i++){
-        System.out.println(s1.charAt(i));
-        }
-        
-    }
-}
-
+     public static void main(String[] args) {
+         String s1="Java programming";
+         for(int i=0;i<s1.length();i++){
+         System.out.println(s1.charAt(i));
+         }
+         
+     }
+ }
+ 
 STRING-TO PRINT STRING FROM BOTTOM TO TOP REVERSE:
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String s1="Java programming";
-        for(int i=s1.length()-1;i>=0;i--){
-        System.out.println(s1.charAt(i));
-        }
-        
-    }
-}
-
+     public static void main(String[] args) {
+         String s1="Java programming";
+         for(int i=s1.length()-1;i>=0;i--){
+         System.out.println(s1.charAt(i));
+         }
+         
+     }
+ }
+ 
 STRING-SUBSTRING:
-
+ 
 class Main {
-    public static void main(String[] args) {
-       String str = "Java programming";
-       System.out.println("Substring from index5:"+str.substring(5));
-       System.out.println("Substring from index0to4:"+str.substring(0,4));
-    }
-}
-
-
-
+     public static void main(String[] args) {
+        String str = "Java programming";
+        System.out.println("Substring from index5:"+str.substring(5));
+        System.out.println("Substring from index0to4:"+str.substring(0,4));
+     }
+ }
+ 
+ 
+ 
 STRING-INDEXOF MEHTOD:
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String str="Java programming";
-        System.out.println("Index of 'prog':"+str.indexOf("prog"));
-        System.out.println("Index of 'z':"+str.indexOf('z'));
-    }
-}
-
+     public static void main(String[] args) {
+         String str="Java programming";
+         System.out.println("Index of 'prog':"+str.indexOf("prog"));
+         System.out.println("Index of 'z':"+str.indexOf('z'));
+     }
+ }
+ 
 STRING-REPLACE METHOD:
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String s1="Java programming";
-        System.out.println(s1.replace('a','x'));
-        
-    }
-}
-
+     public static void main(String[] args) {
+         String s1="Java programming";
+         System.out.println(s1.replace('a','x'));
+         
+     }
+ }
+ 
 STRING-EQUALS METHOD:
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String str1="Java";
-        String str2="Java";
-        System.out.println("Case-sensitive equals:"+str1.equals(str2));
-        System.out.println("Case-sensitive equals:"+str1.equalsIgnore(str2));
-        }
-        
-    }
-}
-
+     public static void main(String[] args) {
+         String str1="Java";
+         String str2="Java";
+         System.out.println("Case-sensitive equals:"+str1.equals(str2));
+         System.out.println("Case-sensitive equals:"+str1.equalsIgnore(str2));
+         }
+         
+     }
+ }
+ 
 STRING-TRIMMING METHOD:
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String str="Java programming";
-        System.out.println("Before trim:["+str+"]");
-        System.out.println("After trim:["+str.trim()+"]");
-        
-    }
-}
-
-
+     public static void main(String[] args) {
+         String str="Java programming";
+         System.out.println("Before trim:["+str+"]");
+         System.out.println("After trim:["+str.trim()+"]");
+         
+     }
+ }
+ 
+ 
 STRING-INTERN() TO SAVE STRING FROM HEAP MEMORY TO STRING POOL(MEMORY ALLOCATION):
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String s1=new String("Javaprogramming");
-        String s2="Javaprogramming";
-        String s3=s1.intern();
-        System.out.println(s1==s2);
-        System.out.println(s2==s3);
-    }
-}
-
+     public static void main(String[] args) {
+         String s1=new String("Javaprogramming");
+         String s2="Javaprogramming";
+         String s3=s1.intern();
+         System.out.println(s1==s2);
+         System.out.println(s2==s3);
+     }
+ }
+ 
 STRING-USING COTAINS
-
+ 
 class Main {
-    public static void main(String[] args) {
-        String str="Javaprogramming";
-        System.out.println("Contins'Java':"+str.contains("Java"));
-        System.out.println("Contins'python':"+str.contains("Python"));
-    }
-}
-
-
+     public static void main(String[] args) {
+         String str="Javaprogramming";
+         System.out.println("Contins'Java':"+str.contains("Java"));
+         System.out.println("Contins'python':"+str.contains("Python"));
+     }
+ }
+ 
+ 
 STRING-USING SPLIT METHOD(GREATEST NUM):
+ 
+import java.util.Scanner;
+class Main {
+     public static void main(String[] args) {
+         Scanner input = new Scanner(System.in);
+         String s1 = input.nextLine();
+         String[] arr = s1.split(",");
+         int max=0;
+         for(int i=0;i<arr.length;i++)
+         {
+             if(Integer.parseInt(arr[i])>max)
+             {
+                 max=Integer.parseInt(arr[i]);
+             }
+         }
+         System.out.print(max);
+     }
+ }
+OUTPUT:123,456,789
+789
+ 
+ 
+STRING-TO FIND LARGEST NUMBER WITH COMPARISON:
+ 
+class Main {
+     public static void main(String[] args) {
+         
+         String s1 = "123,456,789";
+         String[] arr = s1.split(",");
+         System.out.println(arr[0]);
+         int max=0;
+         for(int i=0;i<arr.length;i++)
+         {
+             if(Integer.parseInt(arr[i])>max)
+             {
+                 max=Integer.parseInt(arr[i]);
+                 System.out.println("changed max:"+max);
+             }
+         }
+         System.out.println(max);
+     }
+ }
+ OUTPUT:123
+ changed max:123
+ changed max:456
+ changed max:789
+ 789
+ 
+ 
+STRING-FINDING LARGER NUMBER WITHOUT SPLIT USING ARRAY:
+ 
+class Main {
+     public static void main(String[] args) {
+         int a=10;
+         int max=0;
+         int[] arr={1,2,4,3,5,12,10};
+         for(int i=0;i<arr.length;i++)
+         {
+             if(arr[i]>max)
+             {
+                 max=arr[i];
+             }
+         }
+         System.out.print(max);
+     }
+ }
+
+STRING-APPEND():
 
 import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        StringBuffer str = new StringBuffer("Hello");
+        str.append("World");
+        System.out.println(str);
+    }
+}
+
+STRING-TO GET CHAR AS INPUT FROM THE USER:
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner ref = new Scanner(System.in);
+        System.out.println("Enter yout character value");
+        char ch=ref.nextLine().charAt(0);
+        System.out.println(ch);
+    }
+}
+OUTPUT:Enter yout character value
+xyz
+x
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OBJECT ORIENTED PROGRAMMING(OOPS):
+
+OOPS-USING TWO CLASSES USING STATIC KEYWORD:(sop(classname.variable)):
+
+public class Demo {
+    public static void main(String[] args) {
+        System.out.println(Objectoriented.a);
+        Objectoriented.Display();
+        }
+}
+class  Objectoriented{
+    static int a=10;
+    static int b=20;
+    public static void Display()
+    {
+        System.out.println("static method");
+    }
+} 
+    
+OOPS-USING TWO CLASSES USING NON-STATIC KEYWOD(using object):
+                                                                                            
+public class Main {
+    public static void main(String[] args) {
+        Objectoriented ref=new Objectoriented();
+        System.out.println("non-static:" +ref.name);
+        System.out.println("non-static:" +ref.Rollno);
+        Objectoriented.Display();
+        }
+}
+class  Objectoriented{
+    String name = "java";
+    String Rollno = "12ca01";
+    public static void Display()
+    {
+        System.out.println("static method");
+    }
+} 
+
+
+OOPS-BOTH STATIC AND NON-STATIC:
+
+public class Main {
+    public static void main(String[] args) {
+        Objectoriented ref=new Objectoriented();
+        System.out.println("non-static:" +ref.name);
+        System.out.println("non-static:" +ref.Rollno);
+        System.out.println("static var:"+Objectoriented.a);
+        Objectoriented.Display();
+        }
+}
+class  Objectoriented{
+    String name = "java";
+    String Rollno = "12ca01";
+    static int a =10;
+    public static void Display()
+    {
+        System.out.println("static method");
+    }
+} 
+
+
+OOPS-CONSTRUCTORS:
+
+EXAMPLE:
+class Main {
+    public static void main(String[] args) {
+        Sample ref = new Sample();
+    }
+}
+class Sample {
+    Sample()
+    {
+        System.out.println("Default constructor");
+    }
+}
+
+OOPS-CONSTRUCTORS WITH PARAMETERS:
+
+class Main {
+    public static void main(String[] args) {
+        Sample ref = new Sample("hundai", "i20");
+        Sample ref1 = new Sample("bmw" , "m5");
+        System.out.println(ref.carname);
+        System.out.println(ref.carmodel);
+        System.out.println(ref1.carname);
+        System.out.println(ref1.carmodel);
+    }
+}
+class Sample {
+    String carname;
+    String carmodel;
+    Sample(String carname , String carmodel)
+    {
+        this.carname = carname;
+        this.carmodel = carmodel;
+        System.out.println("Default constructor");
+    }
+}
+
+
+OOPS-CONSTRUCTORS USING ENCAPSULATION(TO KNOW ABOUT THE ACCOUNT HOLDER NAME AND THE BALANCE):
+
+class Main {
+    public static void main(String[] args) {
+       Account ac = new Account("yogitha",2000);
+       System.out.println("Account holdername:"+ac.getAccholder());
+       System.out.println("Holder balance:"+ac.getBalance());
+    }
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+    Account(String Accholder , int Balance)
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+    }
+   public String getAccholder()
+   {
+       return Accholder;
+   }
+
+}
+
+
+OOPS-CONSTRUCTORS USING ENCAPSULATION(TO UPDATE THE NAME):
+
+class Main {
+    public static void main(String[] args) {
+       Account ac = new Account("yogitha",2000);
+       System.out.println("Account holdername:"+ac.getAccholder());
+       System.out.println("Holder balance:"+ac.getBalance());
+       ac.setAccholder("yogi");
+       System.out.println("Updated holder name:"+ac.getAccholder());
+    }
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+    Account(String Accholder , int Balance)
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+    }
+   public String getAccholder()
+   {
+       return Accholder;
+   }
+   public int getBalance()
+   {
+       return Balance;
+   }
+   public void setAccholder(String Accholder)
+   {
+       this.Accholder=Accholder;
+   }
+}
+
+
+OOPS-CONSTRUCTORS USING ENCAPSULATION(TO ADD THE NEW CREDIT AMOUNT AND THE TOTAL):
+
+class Main {
+    public static void main(String[] args) {
+       Account ac = new Account("yogitha",2000,3000);
+       System.out.println("Account holdername:"+ac.getAccholder());
+       System.out.println("Holder balance:"+ac.getBalance());
+       ac.setAccholder("yogi");
+       System.out.println("Updated holder name:"+ac.getAccholder());
+       ac.setBalance(1000);
+        }
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+   
+    Account(String Accholder , int Balance , int Credit)
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+       
+    }
+   public String getAccholder()
+   {
+       return Accholder;
+   }
+   public int getBalance()
+   {
+       return Balance;
+   }
+   
+   public void setBalance(int amount)
+   {
+       if(Balance>0){
+           Balance+=amount;
+           System.out.println("Deposit successfully otal balance:"+Balance);
+       }
+   }
+   public void setAccholder(String Accholder)
+   {
+       this.Accholder=Accholder;
+   }
+}
+
+
+OOPS-CONSTRUCTORS USING ENCAPSULATION(TO KNOW THE WITHDRAW AND THE CURRENT BALANCE AMOUNT):
+
+class Main {
+    public static void main(String[] args) {
+       Account ac = new Account("yogitha",2000);
+       System.out.println("Account holdername:"+ac.getAccholder());
+       System.out.println("Holder balance:"+ac.getBalance());
+       ac.setAccholder("yogi");
+       System.out.println("Updated holder name:"+ac.getAccholder());
+       ac.setBalance(1000);
+       System.out.println("Deposit Amount:"+ac.getBalance());
+       ac.setWithdraw(2000);
+       System.out.println("Current Balance:"+ac.getBalance());
+        }
+}
+class Account {
+    private String Accholder;
+    private int Balance;
+    Account(String Accholder , int Balance )
+    {
+        this.Accholder=Accholder;
+        this.Balance=Balance;
+    }
+   public String getAccholder()
+   {
+       return Accholder;
+   }
+   public int getBalance()
+   {
+       return Balance;
+   }
+   public void setBalance(int amount)
+   {
+       if(Balance>0){
+           Balance+=amount;
+       }
+   }
+   public void setWithdraw(int withdraw){
+       Balance -= withdraw ;
+       System.out.println("Withdrwan amount:"+withdraw);
+   }
+   public void setAccholder(String Accholder)
+   {
+       this.Accholder=Accholder;
+   }
+}
+
+OOPS-INHERITANCE:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PROGRAM:
+
+1.Movie Ticket Discount: Write a program that calculates the final ticket price.
+A theater offers a discount based on age:
+	*Below 12 years 50% discount, 
+	*60 years or above 30% discount, 
+	*Others No discount.
+
+source code:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);        
+   int age= input.nextInt();
+   int discount=0;
+  if(age<12){
+      discount=50;
+  }
+  else if(age>=60)
+      discount=30;
+  
+  if (discount>0) {
+        System.out.println("eligible  "+discount );
+        } else 
+            System.out.println(" not eligible ");
+}
+    
+}
+
+2.Loan Approval:Write a program to check loan eligibility.
+A bank approves a loan if:
+	*The applicant is at least 21 years old.
+	*Their monthly salary is 30,000 or more.
+	*If the salary is less than 30,000 but greater than 20,000, 
+	*they must have a good credit score (above 750).
+
+
+SOURCE CODE:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  
+        System.out.println("age:");
+   int age= input.nextInt();
+   System.out.println("salary:");
+   int salary=input.nextInt();
+   System.out.println("credit:");
+   int credit=input.nextInt();
+  if(age>20 && salary>20000 && salary<30000 && credit >750){
+      
+        System.out.println("eligible  ");
+        } else 
+            System.out.println(" not eligible ");
+} 
+}
+
+
+3.Switch Case / Alternative Conditions
+Traffic Signal Rules:
+Write a program that takes a traffic signal color as input (Red, Yellow, Green) and prints:
+	*"Stop" for Red
+	*"Get Ready" for Yellow
+	*"Go" for Green
+
+SOURCE CODE:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  
+        System.out.println("color:");
+   String color= input.nextLine();
+ switch(color){
+     case "red":
+          System.out.println("Stop");
+          break;
+     case "yellow":
+          System.out.println("Get Ready");
+          break;
+    case "green":
+          System.out.println("Go");
+          break;
+ }
+}
+}
+
+4.Write a java program takes a number from the user and generates an integer between 1 and 7.It displays the weekday name.
+TEST DATA..
+Input number: 3
+Expected output: Wednesday
+
+SOURCE CODE:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  
+        System.out.println("choice:");
+    int choice= input.nextInt();
+ System.out.println("Expected Output:");
+ switch(choice){
+     case 1:
+          System.out.println("Sunday");
+          break;
+     case 2:
+          System.out.println("Monday");
+          break;
+    case 3:
+          System.out.println("Tuesday");
+          break;
+    case 4:
+          System.out.println("Wednesday");
+          break;
+    case 5:
+          System.out.println("Thursday");
+          break;
+    case 6:
+          System.out.println("Friday");
+          break;
+    case 7:
+          System.out.println("Saturday");
+          break;
+ }
+}   
+}
+
+5.Exam passing criteria:  Write a program that checks if a student has passed or failed.
+A student passes an exam if:
+ 	*They score atleast 40 marks in theory and 30 marks in practical's.
+	* If the theory marks are below 40, they must have atleast 70 marks overall to pass.
+
+import java.util.Scanner;
+
 class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String s1 = input.nextLine();
-        String[] arr = s1.split(",");
-        int max=0;
-        for(int i=0;i<arr.length;i++)
-        {
-            if(Integer.parseInt(arr[i])>max)
-            {
-                max=Integer.parseInt(arr[i]);
-            }
-        }
-        System.out.print(max);
-    }
+        System.out.println(" Theory:");
+   int theory= input.nextInt();
+        System.out.println(" Practical:");
+   int practical= input.nextInt();
+     int sum=theory+practical;
+  if(theory>=40 && practical>=30){
+     System.out.println(" pass");
+  }
+ 
+     if(sum>=70){
+     System.out.println(" pass");
+  }
+  else 
+  System.out.println(" Fail");  
 }
-OUTPUT:123,456,789
-789
+    
+}
 
-
-STRING-TO FIND LARGEST NUMBER WITH COMPARISON:
+6.right angled triangled
 
 class Main {
     public static void main(String[] args) {
-        
-        String s1 = "123,456,789";
-        String[] arr = s1.split(",");
-        System.out.println(arr[0]);
-        int max=0;
-        for(int i=0;i<arr.length;i++)
-        {
-            if(Integer.parseInt(arr[i])>max)
-            {
-                max=Integer.parseInt(arr[i]);
-                System.out.println("changed max:"+max);
-            }
-        }
-        System.out.println(max);
+      int n=1;
+      
+      
+      //int count=0;
+      for(int i=0;i<=6;i++){
+           for(int j=0;j<=i;j++){
+         System.out.print(n+ " ");
+                n++;
+      }
+      System.out.println(" ");
     }
 }
-OUTPUT:123
-changed max:123
-changed max:456
-changed max:789
-789
-
-
-STRING-FINDING LARGER NUMBER WITHOUT SPLIT USING ARRAY:
-
-class Main {
-    public static void main(String[] args) {
-        int a=10;
-        int max=0;
-        int[] arr={1,2,4,3,5,12,10};
-        for(int i=0;i<arr.length;i++)
-        {
-            if(arr[i]>max)
-            {
-                max=arr[i];
-            }
-        }
-        System.out.print(max);
-    }
 }
 
