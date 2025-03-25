@@ -579,7 +579,203 @@ class Account {
    }
 }
 
-OOPS-INHERITANCE:
+
+OOPS-POLYMORPHISM(METHOD OVERLOADING):
+
+class Shoppingitem{
+    void additems(String item_name, int price){
+        System.out.println("Item is:"+item_name+" "+"price is:"+price);
+    }
+    void additems(String item_name, int price, int item_quantity){
+        int totalprice=price*item_quantity;
+        System.out.println("Item name is"+" "+"Quantity:"+item_quantity+" "+"total_price"+totalprice);
+    }
+    void additems(String item_name, int price, int item_quantity, int discount)
+    {
+        double finalamount=(item_quantity*price)-discount;
+        System.out.println("final discount:"+finalamount);
+    }
+}
+public class Shoppingcart{
+    public static void main(String[] args)
+    {
+        Shoppingitem ref= new Shoppingitem();
+        ref.additems("laptop",3000);
+        ref.additems("keyboard",1000,3);
+        ref.additems("mouse",4000,5,10);
+    }
+}
+
+
+OOPS-POLYMORPHISM(METHOD OVERRIDING):
+
+class Payvia{
+	void pay(int amount) {
+		System.out.println("in hand amount:"+amount);
+	}
+}
+class Creditupi extends Payvia{
+    void pay(int amount){
+        System.out.println("UPI payment:"+amount);
+    }
+}
+class Gpay extends Payvia{
+    void pay(int amount){
+      System.out.println("Gpay"+amount);  
+    }
+}
+class Paymentprocessing {
+    public static void main(String[] args) {
+       Payvia ref;
+       ref = new Creditupi();//object for credit class
+       ref.pay(2000);
+       ref = new Gpay();//object for Gpay class
+       ref.pay(3000);
+    }
+}
+
+OOPS-POLYMORPHISM(BANK TRANSFER USING OVERRIDING METHOD):
+
+class Banktrans{
+	void pay(int amount) {
+		System.out.println("in hand amount:"+amount);
+	}
+}
+class Otherbank extends Banktrans{
+    void pay(int amount){
+        System.out.println("transfered amount"+amount);
+    }
+}
+class Paymentprocessing {
+    public static void main(String[] args) {
+       Banktrans ref;
+       ref = new Otherbank();//object for credit class
+       ref.pay(2000);
+    }
+}
+
+
+OOPS-ABSTRACTION(USING ABSTRACT CLASS):
+
+public class Main {
+    public static void main(String[] args) {
+        vehicle ref = new bike();
+        ref.Startsusing();
+    }
+}
+abstract class vehicle {
+     abstract void Startsusing();
+}
+class bike extends vehicle {
+    void Startsusing() 
+    {
+        System.out.println("Bike starts with kick.");
+    }
+}
+
+OOPS-ABSTRACTION(USING INTERFACE):
+
+interface Superclass1{
+    void Sending();
+}
+interface Superclass2{
+    void Sended();
+}
+class subclass implements Superclass1,Superclass2{
+    public void Sending()
+    {
+        System.out.println("Superclass 1");
+    }
+    public void Sended()
+    {
+        System.out.println("Superclass 2");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        subclass s = new subclass();
+        s.Sending();
+        s.Sended();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXCEPTION HANDLING:
+
+EXAMPLE:
+
+public class exception {
+	public static void main(String[] args) {
+	try {
+		int num=10/0;
+	}catch(ArithmeticException e) {
+		System.out.println("Cannot divide by Zero:"+e.getMessage());
+	}
+	finally {
+		System.out.println("Execution completed");
+	}
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+COLLECTION IN JAVA-ARRAY LIST:
+
+package collection;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class EliminateVowels {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner scanner = new Scanner(System.in);
+        
+        // Create an ArrayList to store strings
+        ArrayList<String> stringList = new ArrayList<>();
+        
+        // Get the number of strings to input
+        System.out.print("Enter the number of strings you want to input: ");
+        int numberOfStrings = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+        
+        // Input strings from the user
+        for (int i = 0; i < numberOfStrings; i++) {
+            System.out.print("Enter string " + (i + 1) + ": ");
+            String inputString = scanner.nextLine();
+                                  stringList.add(inputString);
+        }
+        
+        // Process the strings to eliminate vowels
+        ArrayList<String> processedList = new ArrayList<>();
+        for (String str : stringList) {
+            String noVowels = eliminateVowels(str);
+            processedList.add(noVowels);
+        }
+        
+        // Display the results
+        System.out.println("Strings after eliminating vowels:");
+        for (String str : processedList) {
+            System.out.println(str);
+        }
+        
+        // Close the scanner
+        scanner.close();
+    }
+    
+    // Method to eliminate vowels from a string
+    private static String eliminateVowels(String str) {
+        return str.replaceAll("[aeiouAEIOU]", "");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -781,4 +977,39 @@ class Main {
     }
 }
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PROBLEMS: 
 
+1.METHOD OVERLOADING:
+EMPLOYEE SALARY CALCULATION:
+Lets consider a real-world sceario an Hr system calculates employee salaries based on different types of employees:
+--full-tim employee get a fixed salary
+--part-time get paid based on hours worked
+--freelancers get paid based on both hours and per hour rate.
+SOURCECODE:
+class employee{
+	void pay(double fixedsalary) {
+		System.out.println("full time employee"+fixedsalary);
+	}
+	void pay(double sal ,int perhour) {
+		double pt=sal*perhour;
+		System.out.println("getting salalry for part-time"+pt);
+		
+	}
+	void pay(double salary, int perhour, int bonus ) {
+				double fl=(salary*perhour)+bonus;
+				System.out.println("freelancer salary:"+fl);
+	}
+}
+public class Salarycal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		employee ref= new employee();
+        ref.pay(800);
+        ref.pay(100,3);
+        ref.pay(100,5,30);
+
+	}
+
+}
